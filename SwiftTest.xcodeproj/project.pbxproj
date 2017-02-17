@@ -7,13 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		CDC91CAA1E5731EF00F4D6BF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC91CA91E5731EF00F4D6BF /* AppDelegate.swift */; };
-		CDC91CAC1E5731EF00F4D6BF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC91CAB1E5731EF00F4D6BF /* ViewController.swift */; };
-		CDC91CAF1E5731EF00F4D6BF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CDC91CAD1E5731EF00F4D6BF /* Main.storyboard */; };
 		CDC91CB11E5731EF00F4D6BF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CDC91CB01E5731EF00F4D6BF /* Assets.xcassets */; };
-		CDC91CB41E5731EF00F4D6BF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CDC91CB21E5731EF00F4D6BF /* LaunchScreen.storyboard */; };
 		CDC91CBF1E5731F000F4D6BF /* SwiftTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC91CBE1E5731F000F4D6BF /* SwiftTestTests.swift */; };
 		CDC91CCA1E5731F000F4D6BF /* SwiftTestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC91CC91E5731F000F4D6BF /* SwiftTestUITests.swift */; };
+		CDC91CEB1E57376C00F4D6BF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC91CEA1E57376C00F4D6BF /* AppDelegate.swift */; };
+		CDC91CEF1E573BAC00F4D6BF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC91CEE1E573BAC00F4D6BF /* ViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,11 +33,7 @@
 
 /* Begin PBXFileReference section */
 		CDC91CA61E5731EF00F4D6BF /* SwiftTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		CDC91CA91E5731EF00F4D6BF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		CDC91CAB1E5731EF00F4D6BF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		CDC91CAE1E5731EF00F4D6BF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CDC91CB01E5731EF00F4D6BF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		CDC91CB31E5731EF00F4D6BF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CDC91CB51E5731EF00F4D6BF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CDC91CBA1E5731F000F4D6BF /* SwiftTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDC91CBE1E5731F000F4D6BF /* SwiftTestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftTestTests.swift; sourceTree = "<group>"; };
@@ -47,6 +41,9 @@
 		CDC91CC51E5731F000F4D6BF /* SwiftTestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftTestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDC91CC91E5731F000F4D6BF /* SwiftTestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftTestUITests.swift; sourceTree = "<group>"; };
 		CDC91CCB1E5731F000F4D6BF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CDC91CEA1E57376C00F4D6BF /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		CDC91CEE1E573BAC00F4D6BF /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CDC91CF01E573CAE00F4D6BF /* SwiftTest-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SwiftTest-Bridging-Header.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,11 +94,16 @@
 		CDC91CA81E5731EF00F4D6BF /* SwiftTest */ = {
 			isa = PBXGroup;
 			children = (
-				CDC91CA91E5731EF00F4D6BF /* AppDelegate.swift */,
-				CDC91CAB1E5731EF00F4D6BF /* ViewController.swift */,
-				CDC91CAD1E5731EF00F4D6BF /* Main.storyboard */,
+				CDC91CD71E57356500F4D6BF /* Controllers */,
+				CDC91CDB1E57357900F4D6BF /* Controls */,
+				CDC91CE51E57360500F4D6BF /* Define */,
+				CDC91CE61E57360500F4D6BF /* Helpers */,
+				CDC91CE71E57360500F4D6BF /* Library */,
+				CDC91CE81E57360500F4D6BF /* Model */,
+				CDC91CE11E5735E800F4D6BF /* Resources */,
+				CDC91CE01E5735A700F4D6BF /* Services */,
+				CDC91CDF1E57358F00F4D6BF /* Supports */,
 				CDC91CB01E5731EF00F4D6BF /* Assets.xcassets */,
-				CDC91CB21E5731EF00F4D6BF /* LaunchScreen.storyboard */,
 				CDC91CB51E5731EF00F4D6BF /* Info.plist */,
 			);
 			path = SwiftTest;
@@ -123,6 +125,144 @@
 				CDC91CCB1E5731F000F4D6BF /* Info.plist */,
 			);
 			path = SwiftTestUITests;
+			sourceTree = "<group>";
+		};
+		CDC91CD71E57356500F4D6BF /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				CDC91CD81E57356500F4D6BF /* Base */,
+				CDC91CD91E57356500F4D6BF /* Controller1 */,
+				CDC91CDA1E57356500F4D6BF /* Home */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		CDC91CD81E57356500F4D6BF /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				CDC91CEA1E57376C00F4D6BF /* AppDelegate.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		CDC91CD91E57356500F4D6BF /* Controller1 */ = {
+			isa = PBXGroup;
+			children = (
+				CDC91CEE1E573BAC00F4D6BF /* ViewController.swift */,
+			);
+			path = Controller1;
+			sourceTree = "<group>";
+		};
+		CDC91CDA1E57356500F4D6BF /* Home */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		CDC91CDB1E57357900F4D6BF /* Controls */ = {
+			isa = PBXGroup;
+			children = (
+				CDC91CDC1E57357900F4D6BF /* Label */,
+				CDC91CDD1E57357900F4D6BF /* TextField */,
+				CDC91CDE1E57357900F4D6BF /* View */,
+			);
+			path = Controls;
+			sourceTree = "<group>";
+		};
+		CDC91CDC1E57357900F4D6BF /* Label */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Label;
+			sourceTree = "<group>";
+		};
+		CDC91CDD1E57357900F4D6BF /* TextField */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = TextField;
+			sourceTree = "<group>";
+		};
+		CDC91CDE1E57357900F4D6BF /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CDC91CDF1E57358F00F4D6BF /* Supports */ = {
+			isa = PBXGroup;
+			children = (
+				CDC91CF01E573CAE00F4D6BF /* SwiftTest-Bridging-Header.h */,
+			);
+			path = Supports;
+			sourceTree = "<group>";
+		};
+		CDC91CE01E5735A700F4D6BF /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		CDC91CE11E5735E800F4D6BF /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				CDC91CE21E5735E800F4D6BF /* Fonts */,
+				CDC91CE31E5735E800F4D6BF /* HTML */,
+				CDC91CE41E5735E800F4D6BF /* Language */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		CDC91CE21E5735E800F4D6BF /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		CDC91CE31E5735E800F4D6BF /* HTML */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = HTML;
+			sourceTree = "<group>";
+		};
+		CDC91CE41E5735E800F4D6BF /* Language */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Language;
+			sourceTree = "<group>";
+		};
+		CDC91CE51E57360500F4D6BF /* Define */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Define;
+			sourceTree = "<group>";
+		};
+		CDC91CE61E57360500F4D6BF /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		CDC91CE71E57360500F4D6BF /* Library */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Library;
+			sourceTree = "<group>";
+		};
+		CDC91CE81E57360500F4D6BF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -193,6 +333,7 @@
 				TargetAttributes = {
 					CDC91CA51E5731EF00F4D6BF = {
 						CreatedOnToolsVersion = 8.2.1;
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 					};
 					CDC91CB91E5731F000F4D6BF = {
@@ -232,9 +373,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CDC91CB41E5731EF00F4D6BF /* LaunchScreen.storyboard in Resources */,
 				CDC91CB11E5731EF00F4D6BF /* Assets.xcassets in Resources */,
-				CDC91CAF1E5731EF00F4D6BF /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,8 +398,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CDC91CAC1E5731EF00F4D6BF /* ViewController.swift in Sources */,
-				CDC91CAA1E5731EF00F4D6BF /* AppDelegate.swift in Sources */,
+				CDC91CEF1E573BAC00F4D6BF /* ViewController.swift in Sources */,
+				CDC91CEB1E57376C00F4D6BF /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -294,25 +433,6 @@
 			targetProxy = CDC91CC61E5731F000F4D6BF /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		CDC91CAD1E5731EF00F4D6BF /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				CDC91CAE1E5731EF00F4D6BF /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		CDC91CB21E5731EF00F4D6BF /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				CDC91CB31E5731EF00F4D6BF /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		CDC91CCC1E5731F000F4D6BF /* Debug */ = {
@@ -412,10 +532,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = SwiftTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = MediaActive.SwiftTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SwiftTest/Supports/SwiftTest-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -424,10 +547,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = SwiftTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = MediaActive.SwiftTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SwiftTest/Supports/SwiftTest-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
