@@ -12,6 +12,9 @@
 		CDC91CCA1E5731F000F4D6BF /* SwiftTestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC91CC91E5731F000F4D6BF /* SwiftTestUITests.swift */; };
 		CDC91CEB1E57376C00F4D6BF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC91CEA1E57376C00F4D6BF /* AppDelegate.swift */; };
 		CDC91CEF1E573BAC00F4D6BF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC91CEE1E573BAC00F4D6BF /* ViewController.swift */; };
+		CDFE10491E588BF50017237D /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDFE10481E588BF50017237D /* Character.swift */; };
+		CDFE104D1E5891BD0017237D /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDFE104C1E5891BD0017237D /* HomeVC.swift */; };
+		CDFE10511E58991F0017237D /* HomeVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = CDFE10501E58991F0017237D /* HomeVC.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +47,9 @@
 		CDC91CEA1E57376C00F4D6BF /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CDC91CEE1E573BAC00F4D6BF /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		CDC91CF01E573CAE00F4D6BF /* SwiftTest-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SwiftTest-Bridging-Header.h"; sourceTree = "<group>"; };
+		CDFE10481E588BF50017237D /* Character.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
+		CDFE104C1E5891BD0017237D /* HomeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
+		CDFE10501E58991F0017237D /* HomeVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeVC.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,6 +162,8 @@
 		CDC91CDA1E57356500F4D6BF /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				CDFE104C1E5891BD0017237D /* HomeVC.swift */,
+				CDFE10501E58991F0017237D /* HomeVC.xib */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -261,6 +269,7 @@
 		CDC91CE81E57360500F4D6BF /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				CDFE10481E588BF50017237D /* Character.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -374,6 +383,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CDC91CB11E5731EF00F4D6BF /* Assets.xcassets in Resources */,
+				CDFE10511E58991F0017237D /* HomeVC.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -399,7 +409,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				CDC91CEF1E573BAC00F4D6BF /* ViewController.swift in Sources */,
+				CDFE104D1E5891BD0017237D /* HomeVC.swift in Sources */,
 				CDC91CEB1E57376C00F4D6BF /* AppDelegate.swift in Sources */,
+				CDFE10491E588BF50017237D /* Character.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -630,6 +642,7 @@
 				CDC91CD01E5731F000F4D6BF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CDC91CD11E5731F000F4D6BF /* Build configuration list for PBXNativeTarget "SwiftTestTests" */ = {
 			isa = XCConfigurationList;
@@ -638,6 +651,7 @@
 				CDC91CD31E5731F000F4D6BF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CDC91CD41E5731F000F4D6BF /* Build configuration list for PBXNativeTarget "SwiftTestUITests" */ = {
 			isa = XCConfigurationList;
@@ -646,6 +660,7 @@
 				CDC91CD61E5731F000F4D6BF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
