@@ -18,7 +18,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         window = UIWindow(frame:  UIScreen.main.bounds)
         let homeViewController = HomeVC(nibName: "HomeVC", bundle: nil)
-        window?.rootViewController = homeViewController
+        let naviController = UINavigationController(rootViewController: homeViewController)
+        window?.rootViewController = naviController
         window?.makeKeyAndVisible()
         return true
     }

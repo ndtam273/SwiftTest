@@ -19,17 +19,33 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e8s-qC-EyD">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="68"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="67"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AMC-GG-f4O">
-                                <rect key="frame" x="52" y="23" width="200" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AMC-GG-f4O">
+                                <rect key="frame" x="80" y="13.5" width="257" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="Bcq-9s-eTp"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bl3-Kc-LdE">
+                                <rect key="frame" x="10" y="9" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="XM2-66-y4Q"/>
+                                    <constraint firstAttribute="height" constant="50" id="yE6-WT-pfQ"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="bl3-Kc-LdE" firstAttribute="centerY" secondItem="e8s-qC-EyD" secondAttribute="centerY" id="1Ar-Pa-FtW"/>
+                            <constraint firstAttribute="trailing" secondItem="AMC-GG-f4O" secondAttribute="trailing" constant="38" id="4kV-Cj-cwS"/>
+                            <constraint firstItem="bl3-Kc-LdE" firstAttribute="leading" secondItem="e8s-qC-EyD" secondAttribute="leading" constant="10" id="B7v-Im-eCc"/>
+                            <constraint firstItem="AMC-GG-f4O" firstAttribute="centerY" secondItem="e8s-qC-EyD" secondAttribute="centerY" id="NwW-se-k0I"/>
+                            <constraint firstItem="AMC-GG-f4O" firstAttribute="leading" secondItem="bl3-Kc-LdE" secondAttribute="trailing" constant="20" id="QrM-3d-M8H"/>
+                        </constraints>
                     </view>
                 </subviews>
                 <constraints>
@@ -40,9 +56,10 @@
                 </constraints>
             </tableViewCellContentView>
             <connections>
+                <outlet property="avatarImg" destination="bl3-Kc-LdE" id="lSB-l2-fhJ"/>
                 <outlet property="characterNameLbl" destination="AMC-GG-f4O" id="C8r-Oj-D65"/>
             </connections>
-            <point key="canvasLocation" x="-33.5" y="-23"/>
+            <point key="canvasLocation" x="-43" y="-23"/>
         </tableViewCell>
     </objects>
 </document>

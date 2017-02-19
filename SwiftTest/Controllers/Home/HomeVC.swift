@@ -49,12 +49,14 @@ extension HomeVC : UITableViewDataSource, UITableViewDelegate {
         
         let cell:HomeCell = tableView.dequeueReusableCell(withIdentifier: "HomeCell") as! HomeCell
         cell.characterNameLbl.text = "鬼"
+        cell.avatarImg.image = UIImage(named: "oni_avt")
         return cell
     }
     
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-      
+        let callDetailVC = CallDetailVC()
+        self.navigationController?.pushViewController(callDetailVC, animated: true)
     }
     
 }

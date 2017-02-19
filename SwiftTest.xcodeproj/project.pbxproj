@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		CD7C06AC1E594E8800B80DDD /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CD7C06AB1E594E8800B80DDD /* Default-568h@2x.png */; };
+		CD7C06B41E59958F00B80DDD /* CallDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7C06B21E59958F00B80DDD /* CallDetailVC.swift */; };
+		CD7C06B51E59958F00B80DDD /* CallDetailVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD7C06B31E59958F00B80DDD /* CallDetailVC.xib */; };
+		CD7C06B81E59AA6400B80DDD /* call.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CD7C06B71E59AA6400B80DDD /* call.mp3 */; };
+		CD7C06BC1E59C36600B80DDD /* talk1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CD7C06B91E59C36600B80DDD /* talk1.mp3 */; };
+		CD7C06BD1E59C36600B80DDD /* talk2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CD7C06BA1E59C36600B80DDD /* talk2.mp3 */; };
+		CD7C06BE1E59C36600B80DDD /* talk3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CD7C06BB1E59C36600B80DDD /* talk3.mp3 */; };
 		CDC91CB11E5731EF00F4D6BF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CDC91CB01E5731EF00F4D6BF /* Assets.xcassets */; };
 		CDC91CBF1E5731F000F4D6BF /* SwiftTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC91CBE1E5731F000F4D6BF /* SwiftTestTests.swift */; };
 		CDC91CCA1E5731F000F4D6BF /* SwiftTestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC91CC91E5731F000F4D6BF /* SwiftTestUITests.swift */; };
@@ -39,6 +45,12 @@
 
 /* Begin PBXFileReference section */
 		CD7C06AB1E594E8800B80DDD /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		CD7C06B21E59958F00B80DDD /* CallDetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CallDetailVC.swift; sourceTree = "<group>"; };
+		CD7C06B31E59958F00B80DDD /* CallDetailVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CallDetailVC.xib; sourceTree = "<group>"; };
+		CD7C06B71E59AA6400B80DDD /* call.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = call.mp3; sourceTree = "<group>"; };
+		CD7C06B91E59C36600B80DDD /* talk1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = talk1.mp3; sourceTree = "<group>"; };
+		CD7C06BA1E59C36600B80DDD /* talk2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = talk2.mp3; sourceTree = "<group>"; };
+		CD7C06BB1E59C36600B80DDD /* talk3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = talk3.mp3; sourceTree = "<group>"; };
 		CDC91CA61E5731EF00F4D6BF /* SwiftTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDC91CB01E5731EF00F4D6BF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CDC91CB51E5731EF00F4D6BF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -83,6 +95,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CD7C06B11E59957800B80DDD /* CallDetail */ = {
+			isa = PBXGroup;
+			children = (
+				CD7C06B21E59958F00B80DDD /* CallDetailVC.swift */,
+				CD7C06B31E59958F00B80DDD /* CallDetailVC.xib */,
+			);
+			path = CallDetail;
+			sourceTree = "<group>";
+		};
+		CD7C06B61E59AA4700B80DDD /* Sound */ = {
+			isa = PBXGroup;
+			children = (
+				CD7C06BA1E59C36600B80DDD /* talk2.mp3 */,
+				CD7C06BB1E59C36600B80DDD /* talk3.mp3 */,
+				CD7C06B71E59AA6400B80DDD /* call.mp3 */,
+				CD7C06B91E59C36600B80DDD /* talk1.mp3 */,
+			);
+			path = Sound;
+			sourceTree = "<group>";
+		};
 		CDC91C9D1E5731EF00F4D6BF = {
 			isa = PBXGroup;
 			children = (
@@ -143,6 +175,7 @@
 		CDC91CD71E57356500F4D6BF /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				CD7C06B11E59957800B80DDD /* CallDetail */,
 				CDC91CD81E57356500F4D6BF /* Base */,
 				CDC91CD91E57356500F4D6BF /* Controller1 */,
 				CDC91CDA1E57356500F4D6BF /* Home */,
@@ -226,6 +259,7 @@
 		CDC91CE11E5735E800F4D6BF /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				CD7C06B61E59AA4700B80DDD /* Sound */,
 				CDC91CE21E5735E800F4D6BF /* Fonts */,
 				CDC91CE31E5735E800F4D6BF /* HTML */,
 				CDC91CE41E5735E800F4D6BF /* Language */,
@@ -393,8 +427,13 @@
 			files = (
 				CDC91CB11E5731EF00F4D6BF /* Assets.xcassets in Resources */,
 				CD7C06AC1E594E8800B80DDD /* Default-568h@2x.png in Resources */,
+				CD7C06B81E59AA6400B80DDD /* call.mp3 in Resources */,
+				CD7C06B51E59958F00B80DDD /* CallDetailVC.xib in Resources */,
 				CDFE10551E59297F0017237D /* HomeCell.xib in Resources */,
+				CD7C06BD1E59C36600B80DDD /* talk2.mp3 in Resources */,
+				CD7C06BC1E59C36600B80DDD /* talk1.mp3 in Resources */,
 				CDFE10511E58991F0017237D /* HomeVC.xib in Resources */,
+				CD7C06BE1E59C36600B80DDD /* talk3.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -422,6 +461,7 @@
 				CDC91CEF1E573BAC00F4D6BF /* ViewController.swift in Sources */,
 				CDFE104D1E5891BD0017237D /* HomeVC.swift in Sources */,
 				CDC91CEB1E57376C00F4D6BF /* AppDelegate.swift in Sources */,
+				CD7C06B41E59958F00B80DDD /* CallDetailVC.swift in Sources */,
 				CDFE10491E588BF50017237D /* Character.swift in Sources */,
 				CDFE10531E5929630017237D /* HomeCell.swift in Sources */,
 			);
