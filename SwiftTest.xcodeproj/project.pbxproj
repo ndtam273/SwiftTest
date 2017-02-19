@@ -15,6 +15,8 @@
 		CDFE10491E588BF50017237D /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDFE10481E588BF50017237D /* Character.swift */; };
 		CDFE104D1E5891BD0017237D /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDFE104C1E5891BD0017237D /* HomeVC.swift */; };
 		CDFE10511E58991F0017237D /* HomeVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = CDFE10501E58991F0017237D /* HomeVC.xib */; };
+		CDFE10531E5929630017237D /* HomeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDFE10521E5929630017237D /* HomeCell.swift */; };
+		CDFE10551E59297F0017237D /* HomeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CDFE10541E59297F0017237D /* HomeCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +52,8 @@
 		CDFE10481E588BF50017237D /* Character.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
 		CDFE104C1E5891BD0017237D /* HomeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		CDFE10501E58991F0017237D /* HomeVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeVC.xib; sourceTree = "<group>"; };
+		CDFE10521E5929630017237D /* HomeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeCell.swift; sourceTree = "<group>"; };
+		CDFE10541E59297F0017237D /* HomeCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -164,6 +168,8 @@
 			children = (
 				CDFE104C1E5891BD0017237D /* HomeVC.swift */,
 				CDFE10501E58991F0017237D /* HomeVC.xib */,
+				CDFE10521E5929630017237D /* HomeCell.swift */,
+				CDFE10541E59297F0017237D /* HomeCell.xib */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -383,6 +389,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CDC91CB11E5731EF00F4D6BF /* Assets.xcassets in Resources */,
+				CDFE10551E59297F0017237D /* HomeCell.xib in Resources */,
 				CDFE10511E58991F0017237D /* HomeVC.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -412,6 +419,7 @@
 				CDFE104D1E5891BD0017237D /* HomeVC.swift in Sources */,
 				CDC91CEB1E57376C00F4D6BF /* AppDelegate.swift in Sources */,
 				CDFE10491E588BF50017237D /* Character.swift in Sources */,
+				CDFE10531E5929630017237D /* HomeCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -7,3 +7,7 @@
 //
 
 import Foundation
+class Character : NSObject {
+    var name : String
+    var avatar : 
+}

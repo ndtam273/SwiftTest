@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="HomeCell" rowHeight="68" id="xFA-VT-zXe" customClass="HomeCell" customModule="SwiftTest" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="68"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="xFA-VT-zXe" id="S7E-E5-8OF">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="67"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e8s-qC-EyD">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="68"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AMC-GG-f4O">
+                                <rect key="frame" x="52" y="23" width="200" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="Th2-TY-B3o"/>
+                                    <constraint firstAttribute="height" constant="21" id="k1d-DC-yGz"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="AMC-GG-f4O" firstAttribute="leading" secondItem="e8s-qC-EyD" secondAttribute="leading" constant="52" id="4fw-wu-nIy"/>
+                            <constraint firstItem="AMC-GG-f4O" firstAttribute="top" secondItem="e8s-qC-EyD" secondAttribute="top" constant="23" id="YpA-Ip-nSk"/>
+                            <constraint firstAttribute="bottom" secondItem="AMC-GG-f4O" secondAttribute="bottom" constant="23.5" id="ke3-bV-cMZ"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="e8s-qC-EyD" secondAttribute="trailing" id="JsI-dg-2fn"/>
+                    <constraint firstItem="e8s-qC-EyD" firstAttribute="top" secondItem="S7E-E5-8OF" secondAttribute="top" id="LeF-AL-Hw6"/>
+                    <constraint firstAttribute="bottom" secondItem="e8s-qC-EyD" secondAttribute="bottom" id="Szl-Ik-hEQ"/>
+                    <constraint firstItem="e8s-qC-EyD" firstAttribute="leading" secondItem="S7E-E5-8OF" secondAttribute="leading" id="ZrN-Ez-WTZ"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="characterNameLbl" destination="AMC-GG-f4O" id="C8r-Oj-D65"/>
+            </connections>
+            <point key="canvasLocation" x="-33.5" y="-23"/>
+        </tableViewCell>
+    </objects>
+</document>

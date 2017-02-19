@@ -11,6 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeVC" customModule="SwiftTest" customModuleProvider="target">
             <connections>
+                <outlet property="characterTable" destination="Nrs-Bh-ep0" id="jRK-gX-IYa"/>
                 <outlet property="view" destination="Rb7-sb-bci" id="zgj-Wz-Jyd"/>
             </connections>
         </placeholder>
@@ -22,6 +23,10 @@
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Nrs-Bh-ep0">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="Rb7-sb-bci" id="9CZ-Sc-hA0"/>
+                        <outlet property="delegate" destination="Rb7-sb-bci" id="6tS-rq-6hF"/>
+                    </connections>
                 </tableView>
             </subviews>
             <color key="backgroundColor" red="1" green="0.16568566131340379" blue="0.13760349043820141" alpha="1" colorSpace="calibratedRGB"/>
