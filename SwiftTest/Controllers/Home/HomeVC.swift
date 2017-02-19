@@ -9,14 +9,16 @@
 import UIKit
 
 class HomeVC: UIViewController {
-    @IBOutlet weak var characterTable: UITableView!
+    @IBOutlet weak var tableView: UITableView!
+    
+    
+    @IBOutlet weak var fuck: UILabel!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        characterTable.register(UINib(nibName: "HomeCell", bundle: nil), forCellReuseIdentifier: "HomeCell")
-        characterTable.delegate = self
-        characterTable.dataSource = self
+        tableView.register(UINib(nibName: "HomeCell", bundle: nil), forCellReuseIdentifier: "HomeCell")
     }
     
     override func didReceiveMemoryWarning() {
@@ -30,6 +32,9 @@ class HomeVC: UIViewController {
 
 extension HomeVC : UITableViewDataSource, UITableViewDelegate {
     
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 70
+    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 20
@@ -42,7 +47,7 @@ extension HomeVC : UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell:HomeCell = characterTable.dequeueReusableCell(withIdentifier: "HomeCell") as! HomeCell
+        let cell:HomeCell = tableView.dequeueReusableCell(withIdentifier: "HomeCell") as! HomeCell
         cell.characterNameLbl.text = "鬼"
         return cell
     }

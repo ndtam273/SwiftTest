@@ -21,23 +21,15 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e8s-qC-EyD">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="68"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AMC-GG-f4O">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AMC-GG-f4O">
                                 <rect key="frame" x="52" y="23" width="200" height="21"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="200" id="Th2-TY-B3o"/>
-                                    <constraint firstAttribute="height" constant="21" id="k1d-DC-yGz"/>
-                                </constraints>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="AMC-GG-f4O" firstAttribute="leading" secondItem="e8s-qC-EyD" secondAttribute="leading" constant="52" id="4fw-wu-nIy"/>
-                            <constraint firstItem="AMC-GG-f4O" firstAttribute="top" secondItem="e8s-qC-EyD" secondAttribute="top" constant="23" id="YpA-Ip-nSk"/>
-                            <constraint firstAttribute="bottom" secondItem="AMC-GG-f4O" secondAttribute="bottom" constant="23.5" id="ke3-bV-cMZ"/>
-                        </constraints>
                     </view>
                 </subviews>
                 <constraints>

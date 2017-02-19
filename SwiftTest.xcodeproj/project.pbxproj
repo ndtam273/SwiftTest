@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CD7C06AC1E594E8800B80DDD /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CD7C06AB1E594E8800B80DDD /* Default-568h@2x.png */; };
 		CDC91CB11E5731EF00F4D6BF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CDC91CB01E5731EF00F4D6BF /* Assets.xcassets */; };
 		CDC91CBF1E5731F000F4D6BF /* SwiftTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC91CBE1E5731F000F4D6BF /* SwiftTestTests.swift */; };
 		CDC91CCA1E5731F000F4D6BF /* SwiftTestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC91CC91E5731F000F4D6BF /* SwiftTestUITests.swift */; };
@@ -37,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CD7C06AB1E594E8800B80DDD /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		CDC91CA61E5731EF00F4D6BF /* SwiftTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDC91CB01E5731EF00F4D6BF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CDC91CB51E5731EF00F4D6BF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -84,6 +86,7 @@
 		CDC91C9D1E5731EF00F4D6BF = {
 			isa = PBXGroup;
 			children = (
+				CD7C06AB1E594E8800B80DDD /* Default-568h@2x.png */,
 				CDC91CA81E5731EF00F4D6BF /* SwiftTest */,
 				CDC91CBD1E5731F000F4D6BF /* SwiftTestTests */,
 				CDC91CC81E5731F000F4D6BF /* SwiftTestUITests */,
@@ -389,6 +392,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CDC91CB11E5731EF00F4D6BF /* Assets.xcassets in Resources */,
+				CD7C06AC1E594E8800B80DDD /* Default-568h@2x.png in Resources */,
 				CDFE10551E59297F0017237D /* HomeCell.xib in Resources */,
 				CDFE10511E58991F0017237D /* HomeVC.xib in Resources */,
 			);
