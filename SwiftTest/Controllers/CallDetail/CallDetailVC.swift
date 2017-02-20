@@ -31,9 +31,20 @@ class CallDetailVC: UIViewController {
             let queue = AVQueuePlayer(items: [item1, item2,item3])
             return queue
         }()
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(CallDetailVC.didFnishAAudio), name:
+            .AVPlayerItemDidPlayToEndTime, object: nil)
         setCallState()
 
         // Do any additional setup after loading the view.
+    }
+    
+    var callImageName: String?
+    
+    @objc func didFnishAAudio() {
+        callerImg.image = UIImage(named: callImageName ?? "talk2")
+        callImageName = "talk3"
+        
     }
 
     override func didReceiveMemoryWarning() {
