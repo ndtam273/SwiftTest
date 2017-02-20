@@ -56,7 +56,7 @@ class HomeVC: UIViewController,GADBannerViewDelegate, GADInterstitialDelegate {
         print(error)
     }
     
-    private func createAndLoadInterstitial() -> GADInterstitial? {
+    func createAndLoadInterstitial() -> GADInterstitial? {
         interstitial = GADInterstitial(adUnitID: "ca-app-pub-8501671653071605/2568258533")
         
         guard let interstitial = interstitial else {
@@ -131,6 +131,7 @@ extension HomeVC: CallDetailVCDelegate {
         switch action {
         case .callBack:
             print("do something")
+             interstitial = createAndLoadInterstitial()
         }
     }
 }
