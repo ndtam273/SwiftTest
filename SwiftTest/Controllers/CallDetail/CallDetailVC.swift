@@ -9,6 +9,10 @@
 import UIKit
 import AVFoundation
 
+protocol CallDetailVCDelegate: NSObjectProtocol {
+    func view(view: CallDetailVC, needsPerformAction action: CallDetailVC.Action)
+}
+
 class CallDetailVC: UIViewController {
     @IBOutlet weak var endCallBtn: UIButton!
     @IBOutlet weak var cancelCallBtn: UIButton!
@@ -17,6 +21,12 @@ class CallDetailVC: UIViewController {
     @IBOutlet weak var callerText: UILabel!
     var phoneSound: AVAudioPlayer!
     var talkQueue: AVQueuePlayer!
+    
+    weak var delegate: CallDetailVCDelegate?
+    
+    enum Action {
+        case callBack
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -97,6 +107,7 @@ class CallDetailVC: UIViewController {
         talk()
     }
     @IBAction func deny(_ sender: UIButton) {
+        delegate?.view(view: self, needsPerformAction: .callBack)
         self.navigationController?.popViewController(animated: true)
     }
 

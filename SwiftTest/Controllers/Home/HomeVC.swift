@@ -118,7 +118,19 @@ extension HomeVC : UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let callDetailVC = CallDetailVC()
+        callDetailVC.delegate = self
         self.navigationController?.pushViewController(callDetailVC, animated: true)
     }
     
+}
+
+// MARK: - CallDetailVCDelegate
+extension HomeVC: CallDetailVCDelegate {
+    
+    func view(view: CallDetailVC, needsPerformAction action: CallDetailVC.Action) {
+        switch action {
+        case .callBack:
+            print("do something")
+        }
+    }
 }
