@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import GoogleMobileAds
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -21,6 +21,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let naviController = UINavigationController(rootViewController: homeViewController)
         window?.rootViewController = naviController
         window?.makeKeyAndVisible()
+        // Admob
+        GADMobileAds.configure(withApplicationID: "ca-app-pub-1113266670590505~5332457676")
         return true
     }
 
