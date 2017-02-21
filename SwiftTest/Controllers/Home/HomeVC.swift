@@ -7,39 +7,119 @@
 //
 
 import UIKit
+import AVFoundation
 import GoogleMobileAds
 
-class HomeVC: UIViewController,GADBannerViewDelegate, GADInterstitialDelegate {
+class HomeVC: UIViewController {
     @IBOutlet weak var tableView: UITableView!
-    
-    
-    @IBOutlet weak var fuck: UILabel!
     
     lazy var adBannerView: GADBannerView = {
         let adBannerView = GADBannerView(adSize: kGADAdSizeSmartBannerPortrait)
-        adBannerView.adUnitID = "ca-app-pub-1113266670590505/6809190871"
+        adBannerView.adUnitID = AdmobDefine.AdUnitID
         adBannerView.delegate = self
         adBannerView.rootViewController = self
         
         return adBannerView
     }()
     var interstitial: GADInterstitial?
-    
+    var charactersList = [Character]()
+   
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         adBannerView.load(GADRequest())
         tableView.register(UINib(nibName: "HomeCell", bundle: nil), forCellReuseIdentifier: "HomeCell")
+        
+        for _ in 0...4 {
+            let characterItem = Character()
+            
+            characterItem.name = "名前のない男"
+            
+            characterItem.avatar =  "call"
+            
+            characterItem.callAudio = "call"
+            characterItem.talk1Img = "talk1"
+            characterItem.talk2Img = "talk2"
+            characterItem.talk3Img = "talk3"
+            characterItem.talk1Audio = "talk1"
+            characterItem.talk2Audio = "talk2"
+            characterItem.talk3Audio = "talk3"
+
+            
+            charactersList.append(characterItem)
+        }
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
-//        interstitial = createAndLoadInterstitial()
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+}
+
+// MARK : UITableViewDataSource, UITableViewDelegate
+
+extension HomeVC : UITableViewDataSource, UITableViewDelegate {
+    
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        return adBannerView
+    }
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        
+        return adBannerView.frame.height
+    }
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 70
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return charactersList.count
+    }
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let cell:HomeCell = tableView.dequeueReusableCell(withIdentifier: "HomeCell") as! HomeCell
+        let characterItem = charactersList[indexPath.row]
+        cell.characterNameLbl.text = characterItem.name
+        cell.avatarImg.image = UIImage(named: characterItem.avatar)
+        return cell
+    }
+    
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        let characterItem = charactersList[indexPath.row]
+        let callDetailVC = CallDetailVC()
+        callDetailVC.characterContent = characterItem
+        callDetailVC.delegate = self
+        self.navigationController?.pushViewController(callDetailVC, animated: true)
+    }
+    
+}
+
+// MARK: - CallDetailVCDelegate
+extension HomeVC: CallDetailVCDelegate {
+    
+    func view(view: CallDetailVC, needsPerformAction action: CallDetailVC.Action) {
+        switch action {
+        case .callBack:
+            print("do something")
+            interstitial = createAndLoadInterstitial()
+        }
+    }
+}
+
+// MARK: - GADBannerViewDelegate, GADInterstitialDelegate
+
+extension HomeVC : GADBannerViewDelegate, GADInterstitialDelegate {
     func adViewDidReceiveAd(_ bannerView: GADBannerView) {
         print("Banner loaded successfully")
         // Reposition the banner ad to create a slide down effect
@@ -57,7 +137,7 @@ class HomeVC: UIViewController,GADBannerViewDelegate, GADInterstitialDelegate {
     }
     
     func createAndLoadInterstitial() -> GADInterstitial? {
-        interstitial = GADInterstitial(adUnitID: "ca-app-pub-8501671653071605/2568258533")
+        interstitial = GADInterstitial(adUnitID: AdmobDefine.AdUnitID)
         
         guard let interstitial = interstitial else {
             return nil
@@ -80,58 +160,6 @@ class HomeVC: UIViewController,GADBannerViewDelegate, GADInterstitialDelegate {
     func interstitialDidFail(toPresentScreen ad: GADInterstitial) {
         print("Fail to receive interstitial")
     }
-}
-
-
-extension HomeVC : UITableViewDataSource, UITableViewDelegate {
     
     
-    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        return adBannerView
-    }
-    
-    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        
-        return adBannerView.frame.height
-    }
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 70
-    }
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 20
-        
-    }
-    
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-        let cell:HomeCell = tableView.dequeueReusableCell(withIdentifier: "HomeCell") as! HomeCell
-        cell.characterNameLbl.text = "鬼"
-        cell.avatarImg.image = UIImage(named: "oni_avt")
-        return cell
-    }
-    
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let callDetailVC = CallDetailVC()
-        callDetailVC.delegate = self
-        self.navigationController?.pushViewController(callDetailVC, animated: true)
-    }
-    
-}
-
-// MARK: - CallDetailVCDelegate
-extension HomeVC: CallDetailVCDelegate {
-    
-    func view(view: CallDetailVC, needsPerformAction action: CallDetailVC.Action) {
-        switch action {
-        case .callBack:
-            print("do something")
-             interstitial = createAndLoadInterstitial()
-        }
-    }
 }

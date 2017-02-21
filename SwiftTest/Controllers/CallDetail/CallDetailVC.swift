@@ -21,6 +21,7 @@ class CallDetailVC: UIViewController {
     @IBOutlet weak var callerText: UILabel!
     var phoneSound: AVAudioPlayer!
     var talkQueue: AVQueuePlayer!
+    var characterContent = Character()
     
     weak var delegate: CallDetailVCDelegate?
     
@@ -32,9 +33,9 @@ class CallDetailVC: UIViewController {
         super.viewDidLoad()
         endCallBtn.isHidden = true
         talkQueue = {
-            let url1 = Bundle.main.url(forResource: "talk1", withExtension: "mp3")!
-            let url2 = Bundle.main.url(forResource: "talk2", withExtension: "mp3")!
-            let url3 = Bundle.main.url(forResource: "talk3", withExtension: "mp3")!
+            let url1 = Bundle.main.url(forResource: characterContent.talk1Audio, withExtension: "mp3")!
+            let url2 = Bundle.main.url(forResource: characterContent.talk2Audio, withExtension: "mp3")!
+            let url3 = Bundle.main.url(forResource: characterContent.talk3Audio, withExtension: "mp3")!
             let item1 = AVPlayerItem(url: url1)
             let item2 = AVPlayerItem(url: url2)
             let item3 = AVPlayerItem(url: url3)
@@ -52,8 +53,8 @@ class CallDetailVC: UIViewController {
     var callImageName: String?
     
     @objc func didFnishAAudio() {
-        callerImg.image = UIImage(named: callImageName ?? "talk2")
-        callImageName = "talk3"
+        callerImg.image = UIImage(named: callImageName ?? characterContent.talk2Img)
+        callImageName = characterContent.talk3Img
         
     }
 
@@ -63,8 +64,9 @@ class CallDetailVC: UIViewController {
     }
     
     func setCallState() {
-        playSound("call.mp3")
-        callerImg.image = UIImage(named: "call")
+        print(characterContent.callAudio)
+        playSound(characterContent.callAudio)
+        callerImg.image = UIImage(named: characterContent.avatar)
         callerText.text = "着信中\n負けもの\n0185-2X-9220"
        
     }
@@ -74,7 +76,7 @@ class CallDetailVC: UIViewController {
         cancelCallBtn.isHidden = true
         endCallBtn.isHidden = false
         stopSound()
-        callerImg.image = UIImage(named: "talk1")
+        callerImg.image = UIImage(named: characterContent.talk1Img)
         callerText.text = "応答中"
         talkQueue.play()
         
@@ -82,7 +84,7 @@ class CallDetailVC: UIViewController {
         
     }
     func playSound(_ fileName: String) {
-        let path = Bundle.main.path(forResource: fileName, ofType:nil)!
+        let path = Bundle.main.path(forResource: fileName, ofType:"mp3")!
         let url = URL(fileURLWithPath: path)
         
         do {

@@ -22,7 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.rootViewController = naviController
         window?.makeKeyAndVisible()
         // Admob
-        GADMobileAds.configure(withApplicationID: "ca-app-pub-1113266670590505~5332457676")
+        GADMobileAds.configure(withApplicationID: AdmobDefine.AppID)
         return true
     }
 
